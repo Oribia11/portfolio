@@ -1,0 +1,439 @@
+<!-- Project 5 Modal -->
+<div id="project5" class="modal">
+    <div class="modal-content">
+        <span class="close" aria-label="Close">&times;</span>
+        <h2 class="text-3xl font-bold mb-6">Europe Interactive Photo Map</h2>
+
+        <!-- Scoped, self-contained styles for this section only -->
+        <section id="europe-photo-map" class="project project--europe" aria-labelledby="europe-photo-map-title"
+            data-completed="2025-05-08">
+            <style>
+                /* scoped to this section only */
+                #europe-photo-map {
+                    --accent-local: var(--accent, #16A085);
+                    /* uses site accent if set; fallback provided */
+                    --ink: #0A0B10;
+                    --paper: #FFFFFF;
+                    --text: #E8EAF2;
+                    --muted: #9AA3B2;
+                    --hair: rgba(255, 255, 255, .10);
+                    color: var(--text);
+                    background: transparent;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    border: 1px solid var(--hair);
+                    border-radius: 12px;
+                    padding: 28px;
+                    margin: 16px 0 0;
+                }
+
+                #europe-photo-map h2 {
+                    margin: 0 0 .25rem 0;
+                    font-size: 1.6rem;
+                    letter-spacing: .2px
+                }
+
+                #europe-photo-map h3 {
+                    margin: .75rem 0 .4rem;
+                    font-size: 1.1rem
+                }
+
+                #europe-photo-map h4 {
+                    margin: .6rem 0 .25rem;
+                    font-size: 1rem;
+                    color: var(--muted)
+                }
+
+                #europe-photo-map .meta {
+                    display: flex;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    color: var(--muted);
+                    font-size: .95rem;
+                    margin: .25rem 0 1rem
+                }
+
+                #europe-photo-map .badge {
+                    padding: .18rem .5rem;
+                    border: 1px solid var(--hair);
+                    border-radius: 999px
+                }
+
+                #europe-photo-map a {
+                    color: var(--accent-local);
+                    text-decoration: none;
+                    border-bottom: 1px solid currentColor
+                }
+
+                /* Single-column flow */
+                #europe-photo-map .flow {
+                    display: block
+                }
+
+                #europe-photo-map .block {
+                    border: 1px solid var(--hair);
+                    border-radius: 10px;
+                    padding: 14px;
+                    margin: 0 0 14px
+                }
+
+                #europe-photo-map ul {
+                    margin: .25rem 0 .75rem .95rem
+                }
+
+                #europe-photo-map ol {
+                    margin: .25rem 0 .75rem 1.1rem
+                }
+
+                #europe-photo-map code {
+                    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                    font-size: .92em
+                }
+
+                #europe-photo-map table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: .95rem
+                }
+
+                #europe-photo-map caption {
+                    caption-side: top;
+                    text-align: left;
+                    font-weight: 600;
+                    margin: 0 0 .4rem;
+                    color: var(--muted)
+                }
+
+                #europe-photo-map th,
+                #europe-photo-map td {
+                    border-bottom: 1px solid var(--hair);
+                    padding: .45rem .4rem;
+                    text-align: left
+                }
+
+                #europe-photo-map .note {
+                    color: var(--muted);
+                    font-size: .92rem
+                }
+
+                #europe-photo-map details {
+                    border: 1px solid var(--hair);
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    margin: 0 0 14px
+                }
+
+                #europe-photo-map summary {
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: var(--accent-local)
+                }
+
+                #europe-photo-map .list-inline {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: .4rem .8rem;
+                    margin: .2rem 0 0;
+                    padding: 0
+                }
+
+                #europe-photo-map .list-inline li {
+                    list-style: none;
+                    padding: .15rem .5rem;
+                    border: 1px solid var(--hair);
+                    border-radius: 999px
+                }
+
+                #europe-photo-map img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    border-radius: 8px;
+                    border: 1px solid var(--hair)
+                }
+
+                #europe-photo-map figure {
+                    margin: 0
+                }
+
+                #europe-photo-map figcaption {
+                    color: var(--muted);
+                    font-size: .9rem;
+                    margin-top: .5rem
+                }
+            </style>
+
+            <header>
+                <h2 id="europe-photo-map-title">Europe Interactive Photo Map</h2>
+                <div class="meta">
+                    <span class="badge">Completed: 8 May 2025</span>
+                    <span class="badge">ESP32 • MCP23017 • ILI9488 • microSD</span>
+                    <span class="badge">Hardware + Embedded + UX</span>
+                </div>
+                <p class="note">An A0 map of Europe with a push-button per country. Pressing a button plays ~15 photos
+                    for that country on a 3.5″ TFT, one every 2s in a continuous loop. All countries are fully wired and
+                    functional.</p>
+            </header>
+
+            <div class="flow">
+                <div class="block">
+                    <h3>What you’re building</h3>
+                    <p>A wall‑mounted A0 map with one button per country. Press a button → a 3.5″ TFT plays ~15 photos
+                        from that country, one every 2s, looping. <strong>All visited countries are wired and
+                            working.</strong></p>
+
+                    <details class="drop">
+                        <summary>Bill of Materials (BOM)</summary>
+                        <ul>
+                            <li>ESP32 dev board</li>
+                            <li>MCP23017 I²C I/O expander</li>
+                            <li>3.5″ ILI9488 SPI TFT</li>
+                            <li>microSD module + microSD card (FAT32)</li>
+                            <li>Momentary push buttons (1 per country)</li>
+                            <li>Wires, perfboard/PCB, standoffs, 3.3 V supply</li>
+                            <li>A0 Europe map print + backing (cardboard/foam core)</li>
+                        </ul>
+                    </details>
+
+                    <figure>
+                        <img src="projects/project1/mapa_Europy.png"
+                            alt="A0 Europe map with a push-button per country mounted on cardboard" loading="lazy"
+                            decoding="async" />
+                        <figcaption>Map reference used for the build (A0 print).</figcaption>
+                    </figure>
+                </div>
+
+                <div class="block">
+                    <h3>How it works</h3>
+                    <ol>
+                        <li>Buttons connect to the MCP23017 (I²C) with internal pull‑ups; they read active‑low.</li>
+                        <li>ESP32 polls the expander and decides which country is active.</li>
+                        <li>ESP32 reads JPEGs from microSD and draws them to the TFT over SPI.</li>
+                        <li>Images live in folders like <code>/it</code>, <code>/tr</code>, etc., and loop every 2000
+                            ms. Switching countries swaps folders instantly.</li>
+                    </ol>
+                </div>
+
+                <div class="block">
+                    <h3>Build — follow these steps</h3>
+                    <ol>
+                        <li><strong>Mount the map:</strong> Fix the A0 print to a rigid backing. Mark country positions
+                            and drill for buttons.</li>
+                        <li><strong>Wire buttons:</strong> Connect each button to MCP23017 GPA/GPB pins with a common
+                            ground. Enable internal pull‑ups.</li>
+                        <li><strong>Hook up I²C:</strong> MCP23017 ⇄ ESP32 (SCL=GPIO 22, SDA=GPIO 21). Address 0x20
+                            (A2/A1/A0 grounded).</li>
+                        <li><strong>Wire the TFT (VSPI):</strong> MOSI=23, SCK=18, CS=15, DC=2, RST=4, 3.3 V/GND.</li>
+                        <li><strong>Wire the microSD (HSPI):</strong> MOSI=13, MISO=27, SCK=14, CS=5, 3.3 V/GND.</li>
+                        <li><strong>Prepare the SD card:</strong>
+                            <ul>
+                                <li>Create one folder per country (e.g., <code>/it</code>, <code>/tr</code>).</li>
+                                <li>Place JPEGs named <code>01.jpg</code>, <code>02.jpg</code>, … inside each folder.
+                                </li>
+                                <li>JPEGs must be 320×480 px, baseline (non‑progressive), sRGB.</li>
+                            </ul>
+                            <pre><code>/it/01.jpg
+/it/02.jpg
+/tr/01.jpg
+/tr/02.jpg
+... one folder per country ...
+              </code></pre>
+                        </li>
+                        <li><strong>Flash & test:</strong> Load firmware that uses <code>TFT_eSPI</code>,
+                            <code>TJpg_Decoder</code>, <code>Adafruit_MCP23X17</code>, <code>SD</code>/<code>SPI</code>.
+                            Test each button cycles photos every ~2000 ms.</li>
+                    </ol>
+                </div>
+
+                <details class="drop">
+                    <summary>Wiring — full pin tables</summary>
+                    <table aria-describedby="i2c-note">
+                        <caption>I²C — MCP23017 ⇄ ESP32</caption>
+                        <thead>
+                            <tr>
+                                <th>MCP23017</th>
+                                <th>ESP32</th>
+                                <th>Function</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12 (SCK)</td>
+                                <td>GPIO 22</td>
+                                <td>SCL</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13 (SDA)</td>
+                                <td>GPIO 21</td>
+                                <td>SDA</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9 (VDD)</td>
+                                <td>3.3 V</td>
+                                <td>Power</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10 (VSS)</td>
+                                <td>GND</td>
+                                <td>Ground</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>18 (RESET)</td>
+                                <td>3.3 V</td>
+                                <td>Reset</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="i2c-note" class="note">I²C address base 0x20 with A2/A1/A0 grounded (000).</p>
+
+                    <table>
+                        <caption>TFT (ILI9488) — VSPI</caption>
+                        <thead>
+                            <tr>
+                                <th>Signal</th>
+                                <th>ESP32</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MOSI</td>
+                                <td>23</td>
+                                <td>Display data out</td>
+                            </tr>
+                            <tr>
+                                <td>SCK</td>
+                                <td>18</td>
+                                <td>Clock</td>
+                            </tr>
+                            <tr>
+                                <td>CS</td>
+                                <td>15</td>
+                                <td>Chip select</td>
+                            </tr>
+                            <tr>
+                                <td>DC</td>
+                                <td>2</td>
+                                <td>Data/command</td>
+                            </tr>
+                            <tr>
+                                <td>RST</td>
+                                <td>4</td>
+                                <td>Reset</td>
+                            </tr>
+                            <tr>
+                                <td>VCC</td>
+                                <td>3.3 V</td>
+                                <td>Power</td>
+                            </tr>
+                            <tr>
+                                <td>GND</td>
+                                <td>GND</td>
+                                <td>Ground</td>
+                            </tr>
+                            <tr>
+                                <td>MISO</td>
+                                <td>—</td>
+                                <td>Leave unconnected</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <caption>microSD — HSPI</caption>
+                        <thead>
+                            <tr>
+                                <th>Signal</th>
+                                <th>ESP32</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MOSI (SDO/DOUT/DO)</td>
+                                <td>13</td>
+                                <td>Data out</td>
+                            </tr>
+                            <tr>
+                                <td>MISO (SDI/SDA/DIN)</td>
+                                <td>27</td>
+                                <td>Data in</td>
+                            </tr>
+                            <tr>
+                                <td>SCK</td>
+                                <td>14</td>
+                                <td>Clock</td>
+                            </tr>
+                            <tr>
+                                <td>CS</td>
+                                <td>5</td>
+                                <td>Chip select</td>
+                            </tr>
+                            <tr>
+                                <td>VCC</td>
+                                <td>3.3 V</td>
+                                <td>Power</td>
+                            </tr>
+                            <tr>
+                                <td>GND</td>
+                                <td>GND</td>
+                                <td>Ground</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <details>
+                        <summary>Power & notes</summary>
+                        <ul class="note">
+                            <li>Keep TFT and SD off the bus at boot by pulling their CS pins HIGH.</li>
+                            <li>Respect <code>prefers-reduced-motion</code> if you add UI motion around the slideshow.
+                            </li>
+                        </ul>
+                    </details>
+                </details>
+
+                <div class="block">
+                    <h3>Troubleshooting</h3>
+                    <ul>
+                        <li><strong>Black TFT:</strong> Re‑check CS/DC pins, 3.3 V power, and that MISO on TFT is
+                            unconnected.</li>
+                        <li><strong>SD not found:</strong> Ensure FAT32, HSPI pins match (13/27/14/5), and CS=5 is
+                            pulled HIGH at boot.</li>
+                        <li><strong>Photos don’t show:</strong> Make sure JPEGs are baseline (not progressive), 320×480
+                            px, sRGB, and in the correct folder names.</li>
+                        <li><strong>No button response:</strong> Confirm MCP23017 address 0x20, pull‑ups enabled, and
+                            buttons wired to GPA/GPB with a proper ground.</li>
+                        <li><strong>SPI conflicts:</strong> Keep TFT on VSPI and SD on HSPI; avoid sharing CS lines.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h4>Visited countries</h4>
+                    <ul class="list-inline" aria-label="Visited countries">
+                        <li>Germany</li>
+                        <li>France</li>
+                        <li>Spain</li>
+                        <li>Portugal</li>
+                        <li>Netherlands</li>
+                        <li>UK</li>
+                        <li>Bosnia &amp; Herzegovina</li>
+                        <li>Montenegro</li>
+                        <li>Greece</li>
+                        <li>Italy</li>
+                        <li>Switzerland</li>
+                        <li>Austria</li>
+                        <li>Albania</li>
+                        <li>Turkey</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+<!-- Project 3 Modal -->
+<div id="project3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="text-3xl font-bold mb-6 text-black">BLE Environmental Monitor</h2>
+
+        <div class="space-y-8 text-gray-700">
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Project Overview</h3>
+                <p class="leading-relaxed">A compact, battery-powered environmental monitoring device that measures
+                    temperature, humidity, air pressure, and air quality. Features Bluetooth Low Energy connectivity for
+                    data transmission to mobile devices and cloud platforms, with months of battery life and
+                    weatherproof design for indoor and outdoor use.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Hardware Specifications</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>nRF52840 SoC (ARM Cortex-M4)</li>
+                        <li>BME680 Environmental Sensor</li>
+                        <li>MiCS-6814 Gas Sensor</li>
+                        <li>E-Paper Display (2.9")</li>
+                        <li>3.7V LiPo Battery (2000mAh)</li>
+                        <li>Solar Panel (5V, 1W)</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Custom PCB (4-layer)</li>
+                        <li>Weatherproof Enclosure (IP65)</li>
+                        <li>Low-Power Crystal Oscillator</li>
+                        <li>Charging Circuit with Protection</li>
+                        <li>External Antenna for BLE</li>
+                        <li>Magnetic Mount System</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Firmware Architecture</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Zephyr RTOS Implementation</h4>
+                        <p class="text-gray-600">Real-time operating system for efficient task scheduling and power
+                            management with dedicated threads for sensor reading, BLE communication, and display
+                            updates.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">BLE Stack & Protocols</h4>
+                        <p class="text-gray-600">Custom GATT services for sensor data transmission with automatic
+                            reconnection and data buffering during connection loss.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Power Optimization</h4>
+                        <p class="text-gray-600">Advanced sleep modes, sensor polling optimization, and dynamic
+                            frequency scaling to achieve 6+ months battery life.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Development Timeline</h3>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong>Concept & Research (Week 1-2):</strong> Market analysis and sensor selection</li>
+                    <li><strong>Hardware Design (Week 3-6):</strong> Schematic design and PCB layout</li>
+                    <li><strong>Prototype Assembly (Week 7-8):</strong> Hand assembly and initial testing</li>
+                    <li><strong>Firmware Development (Week 9-14):</strong> Zephyr RTOS implementation and BLE stack</li>
+                    <li><strong>Mobile App Development (Week 15-18):</strong> Cross-platform app in React Native</li>
+                    <li><strong>Enclosure Design (Week 19-20):</strong> 3D modeling and weatherproofing</li>
+                    <li><strong>Field Testing (Week 21-24):</strong> Real-world deployment and optimization</li>
+                    <li><strong>Production Prep (Week 25-26):</strong> Documentation and manufacturing files</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Performance Metrics</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">±0.5°C</div>
+                        <div class="text-sm text-gray-600">Temperature Accuracy</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">±3%</div>
+                        <div class="text-sm text-gray-600">Humidity Accuracy</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">6+ Months</div>
+                        <div class="text-sm text-gray-600">Battery Life</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">100m</div>
+                        <div class="text-sm text-gray-600">BLE Range</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Key Innovations</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Adaptive sampling rates based on environmental conditions</li>
+                    <li>Machine learning-based air quality index calculation</li>
+                    <li>Mesh networking capability for multi-device deployments</li>
+                    <li>Over-the-air firmware updates via BLE</li>
+                    <li>Predictive maintenance alerts based on sensor degradation</li>
+                    <li>Integration with popular IoT platforms (ThingSpeak, Blynk)</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

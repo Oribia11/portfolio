@@ -1,0 +1,109 @@
+<!-- Project 2 Modal -->
+<div id="project2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="text-3xl font-bold mb-6 text-black">Custom Macro Keyboard</h2>
+
+        <div class="space-y-8 text-gray-700">
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Project Overview</h3>
+                <p class="leading-relaxed">A fully programmable mechanical keyboard featuring OLED displays for dynamic
+                    key labeling, rotary encoders for precise control, and hot-swappable mechanical switches. Designed
+                    specifically for content creators and professionals who need customizable shortcuts and visual
+                    feedback for their workflows.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Hardware Components</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Raspberry Pi Pico (RP2040)</li>
+                        <li>Cherry MX Brown Switches (x12)</li>
+                        <li>OLED Displays (0.96" x 4)</li>
+                        <li>Rotary Encoders (x2)</li>
+                        <li>Custom PCB with Kailh sockets</li>
+                        <li>RGB LED Strip (WS2812B)</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>3D Printed Case (PLA+)</li>
+                        <li>Aluminum Top Plate</li>
+                        <li>USB-C Connector</li>
+                        <li>Magnetic Feet for Stability</li>
+                        <li>Custom Keycaps (Resin Printed)</li>
+                        <li>Diodes and Resistors</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Design & Development</h3>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong>Requirements Analysis:</strong> Surveyed content creators for desired features</li>
+                    <li><strong>Schematic Design:</strong> Created electrical design with switch matrix and OLED
+                        controllers</li>
+                    <li><strong>PCB Layout:</strong> Designed compact PCB with optimal signal routing</li>
+                    <li><strong>3D Modeling:</strong> Created ergonomic case design in Fusion 360</li>
+                    <li><strong>Firmware Development:</strong> Programmed in CircuitPython with custom HID library</li>
+                    <li><strong>Software Suite:</strong> Built configuration tool for easy customization</li>
+                    <li><strong>Prototyping:</strong> Multiple iterations of case and PCB refinements</li>
+                    <li><strong>User Testing:</strong> Gathered feedback from beta testers</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Key Features</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Dynamic Key Labels</h4>
+                        <p class="text-gray-600">OLED displays show current function of each key, changing based on
+                            active application or mode.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Hot-Swappable Switches</h4>
+                        <p class="text-gray-600">Easy switch replacement without soldering for personalized feel and
+                            sound.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">Multi-Layer Functionality</h4>
+                        <p class="text-gray-600">Multiple layers accessible via modifier keys for expanded functionality
+                            in compact form.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-2">RGB Lighting</h4>
+                        <p class="text-gray-600">Customizable per-key RGB lighting with multiple animation modes and
+                            profiles.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Technical Challenges</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Challenge: OLED Refresh Rate</h4>
+                        <p class="text-gray-600">Multiple OLED displays caused performance bottlenecks.</p>
+                        <p class="text-gray-600"><strong>Solution:</strong> Implemented asynchronous display updates and
+                            frame buffering.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Challenge: Power Management</h4>
+                        <p class="text-gray-600">RGB LEDs and OLEDs drew significant power over USB.</p>
+                        <p class="text-gray-600"><strong>Solution:</strong> Added intelligent brightness control and
+                            sleep modes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-purple-600">Lessons Learned</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Ergonomics are crucial for devices used for extended periods</li>
+                    <li>User configuration tools are as important as the hardware itself</li>
+                    <li>Manufacturing tolerances significantly impact assembly experience</li>
+                    <li>Open-source documentation accelerates community adoption</li>
+                    <li>Iterative prototyping saves time in the long run</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

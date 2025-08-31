@@ -1,0 +1,101 @@
+<!-- Project 1 Modal -->
+<div id="project1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="text-3xl font-bold mb-6 text-black">Smart Irrigation System</h2>
+
+        <div class="space-y-8 text-gray-700">
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Project Overview</h3>
+                <p class="leading-relaxed">A comprehensive automated irrigation system that monitors soil moisture
+                    levels and waters plants automatically based on their specific needs. The system includes remote
+                    monitoring capabilities and can be controlled via a mobile app, making it perfect for both home
+                    gardeners and small-scale agricultural applications.</p>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Components & Materials</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>ESP32 Development Board</li>
+                        <li>Soil Moisture Sensors (x4)</li>
+                        <li>12V Water Pump</li>
+                        <li>Relay Module (4-channel)</li>
+                        <li>LCD Display (16x2)</li>
+                        <li>DS18B20 Temperature Sensor</li>
+                    </ul>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Power Supply Unit (12V/5A)</li>
+                        <li>Custom PCB (designed in KiCad)</li>
+                        <li>Waterproof enclosure</li>
+                        <li>Flexible tubing system</li>
+                        <li>Drip irrigation nozzles</li>
+                        <li>Various resistors and capacitors</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Development Process</h3>
+                <ol class="list-decimal list-inside space-y-3">
+                    <li><strong>Research & Planning:</strong> Analyzed different irrigation methods and sensor
+                        technologies</li>
+                    <li><strong>Circuit Design:</strong> Created schematic and PCB layout using KiCad</li>
+                    <li><strong>Prototype Assembly:</strong> Built initial version on breadboard for testing</li>
+                    <li><strong>Software Development:</strong> Programmed ESP32 using Arduino IDE with FreeRTOS</li>
+                    <li><strong>MQTT Integration:</strong> Implemented IoT communication for remote monitoring</li>
+                    <li><strong>Mobile App:</strong> Developed companion app using Flutter</li>
+                    <li><strong>Field Testing:</strong> Conducted extensive testing with different plant types</li>
+                    <li><strong>Optimization:</strong> Fine-tuned algorithms based on real-world data</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Key Challenges & Solutions</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Challenge: Sensor Calibration</h4>
+                        <p class="text-gray-600">Different soil types required unique calibration values.</p>
+                        <p class="text-gray-600"><strong>Solution:</strong> Implemented adaptive calibration algorithm
+                            with soil type detection.</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800">Challenge: Power Management</h4>
+                        <p class="text-gray-600">Outdoor deployment required efficient power usage.</p>
+                        <p class="text-gray-600"><strong>Solution:</strong> Added deep sleep modes and solar panel
+                            integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Results & Impact</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="text-center p-4 bg-lime-50 rounded-lg">
+                        <div class="text-2xl font-bold text-lime-600">30%</div>
+                        <div class="text-sm text-gray-600">Water Savings</div>
+                    </div>
+                    <div class="text-center p-4 bg-lime-50 rounded-lg">
+                        <div class="text-2xl font-bold text-lime-600">95%</div>
+                        <div class="text-sm text-gray-600">Accuracy Rate</div>
+                    </div>
+                    <div class="text-center p-4 bg-lime-50 rounded-lg">
+                        <div class="text-2xl font-bold text-lime-600">24/7</div>
+                        <div class="text-sm text-gray-600">Monitoring</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-semibold mb-4 text-lime-600">Lessons Learned</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Importance of robust error handling in IoT applications</li>
+                    <li>User interface design significantly impacts adoption rates</li>
+                    <li>Weather-resistant hardware requires careful material selection</li>
+                    <li>Data logging provides valuable insights for system optimization</li>
+                    <li>Community feedback is essential for iterative improvement</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
